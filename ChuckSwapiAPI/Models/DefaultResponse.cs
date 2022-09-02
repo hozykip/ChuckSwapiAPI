@@ -40,4 +40,16 @@
         public int TotalItems { get; set; } = 0;
         public List<T> Items { get; set; } = new List<T>();
     }
+
+    //public class SearchResult<T,M>
+    //{
+    //    public T tResult { get; set; }
+    //    public M mResult { get; set; }
+    //}
+
+    public class SearchResult
+    {
+        public PaginatedResult<StarResult> swapi { get; set; }
+        public List<ChuckJokeApiResponse> chucks { get; set; }
+    }
 }

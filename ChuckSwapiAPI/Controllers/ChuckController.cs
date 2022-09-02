@@ -32,12 +32,12 @@ namespace ChuckSwapiAPI.Controllers
         
         [HttpGet]
         [Route("random")]
-        public async Task<DefaultResponse<ChuckSearchApiResponse>> Random(string category)
+        public async Task<DefaultResponse<ChuckJokeApiResponse>> Random(string category)
         {
-            DefaultResponse<ChuckSearchApiResponse> response = new DefaultResponse<ChuckSearchApiResponse>("Failed to fetch joke");
+            DefaultResponse<ChuckJokeApiResponse> response = new DefaultResponse<ChuckJokeApiResponse>("Failed to fetch joke");
             try
             {
-                ChuckSearchApiResponse? jokeResponse = await ChuckAPI.getRandom(category);
+                ChuckJokeApiResponse? jokeResponse = await ChuckAPI.getRandom(category);
 
                 if(jokeResponse.id != null)
                 {
